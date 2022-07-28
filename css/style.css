@@ -42,27 +42,27 @@ body{
 .idea1{
     left: 15%;
     bottom: 15%;
-    background-image: url('/img/coffee.png');
+    background-image: url('../img/coffee.png');
 }
 .idea2{
     left: 20%;
     top: 20%;
-    background-image: url('/img/sushi.png');
+    background-image: url('../img/sushi.png');
 }
 .idea3{
     left: 45%;
     top: 10%;
-    background-image: url('/img/injection.png');
+    background-image: url('../img/injection.png');
 }
 .idea4{
     right: 25%;
     top: 20%;
-    background-image: url('/img/kosio.png');
+    background-image: url('../img/kosio.png');
 }
 .idea5{
     right: 20%;
     bottom: 15%;
-    background-image: url('/img/present.png');
+    background-image: url('../img/present.png');
 }
 
 .tooltip{
