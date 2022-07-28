@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: linear-gradient(skyblue,pink );
+    text-shadow: 0px 0px 5px darkred;
+}
+
+.holder{
+    position: relative;
+    height: 80vh;
+    width: 80%;
+    margin: 10vh auto;
+}
+
+.neli{
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    transition: 1s;
+}
+.neli:hover{
+    transform: scale(1.1);
+}
+
+.idea1, .idea2, .idea3, .idea4, .idea5{
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0;
+    background-size: cover;
+}
+
+.idea1:hover, .idea2:hover, .idea3:hover, .idea4:hover, .idea5:hover{
+    box-shadow: 0px 0px 35px palevioletred;
+}
+
+
+
+.idea1{
+    left: 15%;
+    bottom: 15%;
+    background-image: url('/img/coffee.png');
+}
+.idea2{
+    left: 20%;
+    top: 20%;
+    background-image: url('/img/sushi.png');
+}
+.idea3{
+    left: 45%;
+    top: 10%;
+    background-image: url('/img/injection.png');
+}
+.idea4{
+    right: 25%;
+    top: 20%;
+    background-image: url('/img/kosio.png');
+}
+.idea5{
+    right: 20%;
+    bottom: 15%;
+    background-image: url('/img/present.png');
+}
+
+.tooltip{
+    position: absolute;
+    left: 85%;
+    top: 20%;
+    height: 5rem;
+    width: 15rem;
+    background-color: pink;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.present{
+    height: 10em;
+    width: 10em;
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+    background-color: pink;
+    padding: 0.5;
+    visibility: hidden;
+    box-shadow: 0px 0px 10px palevioletred;
+}
+
+.present span{
+    font-size: 0.5rem;
+}
+
+.active{
+    opacity: 1;
+}
+
+@keyframes idea1 {
+    0%{
+        left: 45%;
+        bottom: 15%;
+        opacity: 0;
+    }
+    100%{
+        left: 15%;
+        bottom: 15%;
+        opacity: 1;
+    }
+}
+@keyframes idea1-rev {
+    0%{
+        left: 15%;
+        bottom: 15%;
+        opacity: 1;
+    }
+    100%{
+        left: 45%;
+        bottom: 15%;
+        opacity: 0;
+    }
+}
+
+@keyframes idea2 {
+    0%{
+        left: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+    100%{
+        left: 20%;
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes idea2-rev {
+    0%{
+        left: 20%;
+        top: 20%;
+        opacity: 1;
+    }
+    100%{
+        left: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+}
+
+@keyframes idea3 {
+    0%{
+        left: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+    100%{
+        left: 43%;
+        top: 10%;
+        opacity: 1;
+    }
+}
+@keyframes idea3-rev {
+    0%{
+        left: 43%;
+        top: 10%;
+        opacity: 1;
+    }
+    100%{
+        left: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+}
+
+@keyframes idea4 {
+    0%{
+        right: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+    100%{
+        right: 25%;
+        top: 20%;
+        opacity: 1;
+    }
+}
+@keyframes idea4-rev {
+    0%{
+        right: 25%;
+        top: 20%;
+        opacity: 1;
+    }
+    100%{
+        right: 45%;
+        top: 75%;
+        opacity: 0;
+    }
+}
+
+@keyframes idea5 {
+    0%{
+        right: 45%;
+        bottom: 15%;
+        opacity: 0;
+    }
+    100%{
+        right: 20%;
+        bottom: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes idea5-rev {
+    0%{
+        right: 20%;
+        bottom: 15%;
+        opacity: 1;
+    }
+    100%{
+        right: 45%;
+        bottom: 15%;
+        opacity: 0;
+    }
+}
+
+@keyframes open-present {
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-275%) translateY(-100%) scale(3);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes close-present {
+    0%{
+        visibility: visible;
+        transform: translateX(-275%) translateY(-100%) scale(3);
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        transform: translateX(0%) translateY(0%) scale(1);
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 750px){
+
+    .neli{
+        width: 9em;
+        height: 9em;
+    }
+    .idea1, .idea2, .idea3, .idea4, .idea5{
+        width: 3.5em;
+        height: 3.5em;
+    }
+    .tooltip{
+        height: 4.5em ;
+        width: 7.5em;
+        font-size: 0.5rem;
+    }
+    .present{
+        height: 4em;
+        width: 3em;
+    }
+    .present p{
+        font-size: 0.3rem;
+    }
+    .present span{
+        font-size: 0.2rem;
+    }
+}
